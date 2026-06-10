@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reseller Finance Tracker — Setup Guide</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:#f8f8f6;color:#1a1a18;line-height:1.6}
+.page{max-width:720px;margin:0 auto;padding:2rem 1.5rem}
+.hero{text-align:center;padding:2.5rem 0 2rem;border-bottom:1px solid #e5e3dd;margin-bottom:2rem}
+.hero-badge{display:inline-block;background:#DBEAFE;color:#1d4ed8;font-size:12px;font-weight:600;padding:4px 14px;border-radius:20px;margin-bottom:1rem;letter-spacing:.04em;text-transform:uppercase}
+.hero h1{font-size:26px;font-weight:600;margin-bottom:.5rem}
+.hero p{font-size:15px;color:#475569;max-width:480px;margin:0 auto 1.5rem}
+.open-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 22px;background:#2563EB;color:#fff;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none}
+.section-head{font-size:11px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.07em;margin:2rem 0 1rem;padding-bottom:6px;border-bottom:1px solid #e5e3dd}
+.step-list{display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem}
+.step{background:#fff;border:1px solid #e5e3dd;border-radius:12px;padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start}
+.step-num{min-width:28px;height:28px;border-radius:50%;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;color:#fff}
+.n-blue{background:#2563EB}.n-green{background:#16A34A}.n-amber{background:#D97706}.n-purple{background:#7C3AED}
+.step-body h3{font-size:14px;font-weight:600;margin-bottom:5px}
+.step-body p{font-size:13px;color:#334155;margin-bottom:6px}
+.step-body p:last-child{margin-bottom:0}
+.step-body ul{font-size:13px;color:#334155;padding-left:1.25rem;display:flex;flex-direction:column;gap:3px}
+.step-body a{color:#2563EB;text-decoration:none}
+code{background:#f1f5f9;padding:2px 6px;border-radius:4px;font-family:monospace;font-size:12px}
+.callout{border-radius:10px;padding:12px 16px;font-size:13px;margin-bottom:1.5rem;display:flex;gap:10px;align-items:flex-start}
+.callout-blue{background:#DBEAFE;border:1px solid #93c5fd;color:#1d4ed8}
+.callout-amber{background:#FEF3C7;border:1px solid #fcd34d;color:#92400e}
+.field-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:1rem}
+.field-table th{text-align:left;padding:7px 10px;background:#f8fafc;border:1px solid #e2e8f0;font-weight:600;color:#64748b;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.field-table td{padding:7px 10px;border:1px solid #e2e8f0;vertical-align:top}
+.field-table td:first-child{font-weight:500;white-space:nowrap}
+.badge{display:inline-block;padding:2px 7px;border-radius:5px;font-size:11px;font-weight:600}
+.badge-req{background:#FEE2E2;color:#991b1b}
+.badge-auto{background:#DCFCE7;color:#15803d}
+.badge-opt{background:#f1f5f9;color:#475569}
+.faq{display:flex;flex-direction:column;gap:10px;margin-bottom:2rem}
+.faq-item{background:#fff;border:1px solid #e5e3dd;border-radius:10px;padding:1rem 1.25rem}
+.faq-q{font-size:14px;font-weight:600;margin-bottom:5px}
+.faq-a{font-size:13px;color:#334155}
+.footer{text-align:center;padding:2rem 0;border-top:1px solid #e5e3dd;font-size:13px;color:#64748b}
+.nav-pill{display:inline-flex;align-items:center;gap:5px;background:#1E2A3B;color:#94A3B8;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:500}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="hero">
+  <div class="hero-badge">Setup guide</div>
+  <h1>Reseller Finance Tracker</h1>
+  <p>Track income, expenses, and your Schedule C in one place. Data syncs across every device you sign into.</p>
+  <a href="https://bigman7911.github.io/tracker/" class="open-btn" target="_blank">Open the app &#8599;</a>
+</div>
+
+<div class="section-head">First time setup</div>
+<div class="step-list">
+  <div class="step">
+    <div class="step-num n-blue">1</div>
+    <div class="step-body">
+      <h3>Sign in with a magic link</h3>
+      <p>Enter your email on the sign-in screen and hit Send magic link. Check your inbox, click the link, and you are in. No password ever.</p>
+      <p>Your data is tied to your email and syncs across every device you sign in on.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num n-green">2</div>
+    <div class="step-body">
+      <h3>Set up your lists in Settings</h3>
+      <p>Before adding any data go to <span class="nav-pill">Settings</span> and build out your custom lists. These populate every dropdown in the app.</p>
+      <ul>
+        <li><strong>Income channels</strong> — where you sell (eBay, Amazon, Facebook, Poshmark, etc.)</li>
+        <li><strong>Income accounts</strong> — where money lands (BOA, Cash, Venmo, PayPal, etc.)</li>
+        <li><strong>Expense accounts</strong> — cards and accounts you buy with</li>
+        <li><strong>Expense categories</strong> — pre-filled with Schedule C lines, add any custom ones</li>
+        <li><strong>Platform</strong> — where inventory is destined (Local is pre-filled, add eBay, Amazon FBA, etc.)</li>
+      </ul>
+      <p style="margin-top:8px">Type a value and hit Add. Hit X to remove. Changes save instantly.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num n-amber">3</div>
+    <div class="step-body">
+      <h3>Add your first entries</h3>
+      <p>Use the Quick Add Income and Quick Add Expense panels on the Dashboard for fast entries. For full detail use the <span class="nav-pill">+ Income</span> and <span class="nav-pill">- Expense</span> pages in the sidebar.</p>
+      <p>Net profit calculates automatically: Payout minus COGS minus Shipping.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num n-purple">4</div>
+    <div class="step-body">
+      <h3>Watch the dashboard update</h3>
+      <p>Revenue, expenses, net profit, gross margin, and estimated quarterly tax all update in real time as you add entries. Charts show revenue by channel and expenses by category.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-head">Income entry fields</div>
+<table class="field-table">
+  <thead><tr><th>Field</th><th>Required?</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>Channel</td><td><span class="badge badge-req">Required</span></td><td>Where the sale happened — from your custom channels list</td></tr>
+    <tr><td>Buyer</td><td><span class="badge badge-opt">Optional</span></td><td>Name or handle, e.g. <code>randy fb</code>. Leave blank for platform payouts.</td></tr>
+    <tr><td>Account</td><td><span class="badge badge-req">Required</span></td><td>Where the money landed — from your custom accounts list</td></tr>
+    <tr><td>COGS</td><td><span class="badge badge-req">Required</span></td><td>What you paid for the item. Use 0 if tracking cost in expenses separately.</td></tr>
+    <tr><td>Shipping</td><td><span class="badge badge-req">Required</span></td><td>Shipping cost you paid. Use 0 if none.</td></tr>
+    <tr><td>Payout</td><td><span class="badge badge-req">Required</span></td><td>What you received. For eBay and Amazon use the net deposit amount.</td></tr>
+    <tr><td>Net</td><td><span class="badge badge-auto">Auto</span></td><td>Payout minus COGS minus Shipping. Calculated for you.</td></tr>
+    <tr><td>Item description</td><td><span class="badge badge-req">Required</span></td><td>What you sold, e.g. <code>2x Firman generators</code></td></tr>
+  </tbody>
+</table>
+
+<div class="section-head">Expense entry fields</div>
+<table class="field-table">
+  <thead><tr><th>Field</th><th>Required?</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>Amount</td><td><span class="badge badge-req">Required</span></td><td>Dollar amount of the purchase (positive number)</td></tr>
+    <tr><td>Account</td><td><span class="badge badge-req">Required</span></td><td>Card or account used — from your custom expense accounts list</td></tr>
+    <tr><td>Category</td><td><span class="badge badge-req">Required</span></td><td>Maps directly to Schedule C — see category guide below</td></tr>
+    <tr><td>Platform</td><td><span class="badge badge-opt">Optional</span></td><td>Where this inventory is destined to sell</td></tr>
+    <tr><td>Item description</td><td><span class="badge badge-req">Required</span></td><td>What you bought, e.g. <code>5x daily bugle lego sets</code></td></tr>
+    <tr><td>Notes</td><td><span class="badge badge-opt">Optional</span></td><td>Anything extra — partial return, promo credit, etc.</td></tr>
+  </tbody>
+</table>
+
+<div class="section-head">Expense categories — Schedule C mapping</div>
+<table class="field-table">
+  <thead><tr><th>Category</th><th>Schedule C line</th></tr></thead>
+  <tbody>
+    <tr><td><code>cogs</code></td><td>Part III, Line 42 — Cost of goods sold</td></tr>
+    <tr><td><code>advertising</code></td><td>Part II, Line 8</td></tr>
+    <tr><td><code>car and truck</code></td><td>Part II, Line 9</td></tr>
+    <tr><td><code>insurance</code></td><td>Part II, Line 15</td></tr>
+    <tr><td><code>legal and professional</code></td><td>Part II, Line 17</td></tr>
+    <tr><td><code>meals (50%)</code></td><td>Part II, Line 24b</td></tr>
+    <tr><td><code>office expense</code></td><td>Part II, Line 18</td></tr>
+    <tr><td><code>rent or lease</code></td><td>Part II, Line 20</td></tr>
+    <tr><td><code>repairs and maintenance</code></td><td>Part II, Line 21</td></tr>
+    <tr><td><code>software</code></td><td>Part II, Line 18 (office/computer)</td></tr>
+    <tr><td><code>supplies</code></td><td>Part II, Line 22</td></tr>
+    <tr><td><code>shipping</code></td><td>Part III, Line 39</td></tr>
+    <tr><td><code>taxes and licenses</code></td><td>Part II, Line 23</td></tr>
+    <tr><td><code>travel</code></td><td>Part II, Line 24a</td></tr>
+    <tr><td><code>utilities</code></td><td>Part II, Line 25</td></tr>
+    <tr><td><code>other expenses</code></td><td>Part II, Line 27a</td></tr>
+  </tbody>
+</table>
+
+<div class="section-head">Auto-pull from eBay and Amazon (optional)</div>
+<div class="callout callout-blue">
+  <span>&#9889;</span>
+  <span>Auto-pull imports your eBay payouts and Amazon settlement events automatically. Optional — you can enter everything by hand if you prefer.</span>
+</div>
+<div class="step-list">
+  <div class="step">
+    <div class="step-num n-blue">1</div>
+    <div class="step-body">
+      <h3>eBay credentials</h3>
+      <ul>
+        <li>Go to <a href="https://developer.ebay.com/my/keys" target="_blank">developer.ebay.com/my/keys</a></li>
+        <li>Create a Production keyset (not Sandbox)</li>
+        <li>Add scope: <code>https://api.ebay.com/oauth/api_scope/sell.finances</code></li>
+        <li>Generate a User token via OAuth</li>
+        <li>Copy App ID, Cert ID, Dev ID, and User Token into Settings</li>
+      </ul>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num n-green">2</div>
+    <div class="step-body">
+      <h3>Amazon credentials</h3>
+      <ul>
+        <li>Go to <a href="https://sellercentral.amazon.com/apps/manage" target="_blank">Seller Central → Apps and Services → Develop Apps</a></li>
+        <li>Create an app, request Finances and Orders roles</li>
+        <li>Capture Client ID, Client Secret, and Refresh Token</li>
+        <li>US Marketplace ID is pre-filled as <code>ATVPDKIKX0DER</code></li>
+        <li>Paste all values into Settings → Amazon SP-API Credentials → Save</li>
+      </ul>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num n-amber">3</div>
+    <div class="step-body">
+      <h3>Pull your data</h3>
+      <p>Go to Settings → Auto-Pull. Set your date range and hit Pull eBay or Pull Amazon. The log shows what was added and what was skipped. Re-pulling the same date range is safe — duplicates are blocked automatically.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-head">Exporting data</div>
+<div class="step-list">
+  <div class="step">
+    <div class="step-num n-blue">1</div>
+    <div class="step-body">
+      <h3>Export to CSV</h3>
+      <p>Use the Export Report button at the bottom of the sidebar. Downloads income.csv and expenses.csv — both open in Excel or Google Sheets.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num n-green">2</div>
+    <div class="step-body">
+      <h3>Download blank Excel template</h3>
+      <p>Also available via Export Report — gives you a pre-structured xlsx with income, expenses, monthly P&L, and a Schedule C summary sheet. Paste your CSVs in at year-end and take the net profit number to your tax preparer.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-head">Frequently asked questions</div>
+<div class="faq">
+  <div class="faq-item">
+    <div class="faq-q">Will my data be there if I close the browser or switch devices?</div>
+    <div class="faq-a">Yes. Everything saves to your account. Sign in with the same email on any device and your data is there.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I use this on my phone?</div>
+    <div class="faq-a">Yes. Open the link in your phone browser and bookmark it. The layout is responsive.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What if I accidentally delete an entry?</div>
+    <div class="faq-a">Deletions are permanent — no undo. Export your CSVs regularly as backup.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What does the estimated tax number show?</div>
+    <div class="faq-a">A rough estimate of your quarterly self-employment tax based on current net profit: net x 92.35% x 15.3% divided by 4. It updates in real time. Use it as a ballpark, not tax advice.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How do I prepare for Schedule C at year-end?</div>
+    <div class="faq-a">Export your CSVs from the sidebar, paste them into the blank Excel template, and look at the Schedule C summary sheet. It maps your totals to the right lines. Give those numbers to your tax preparer or enter them into your tax software.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">My magic link is not working</div>
+    <div class="faq-a">Check your spam folder first. Links expire after 1 hour — go back and request a new one. Click the link on the same device you requested it from.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">My dropdowns are empty</div>
+    <div class="faq-a">Go to Settings and add your channels, accounts, categories, and platforms. All dropdowns are fully custom — nothing is pre-filled except expense categories and Local under Platform.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">The eBay or Amazon pull is not working</div>
+    <div class="faq-a">Make sure credentials are saved in Settings. For eBay use a Production keyset — Sandbox keys will not work. For Amazon confirm the proxy URL is filled in and test the connection first.</div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Built by <strong>Train With David</strong> &nbsp;&#183;&nbsp; <a href="https://www.youtube.com/@davidtrainss" style="color:#2563EB" target="_blank">@davidtrainss</a> on YouTube</p>
+</div>
+
+</div>
+</body>
+</html>
