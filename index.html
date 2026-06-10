@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reseller Finance</title>
+<title>Reseller Finance — Modern Dashboard</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -223,6 +223,207 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--t
 
 @media(max-width:1200px){.metric-row{grid-template-columns:repeat(3,1fr)}.row-3{grid-template-columns:1fr}.row-2-1{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.sidebar{display:none}.main{margin-left:0}.metric-row{grid-template-columns:repeat(2,1fr)}.row-2{grid-template-columns:1fr}}
+
+
+/* ────────────────────────────────────────────────────────────────
+   MODERN UI POLISH — cleaner SaaS dashboard styling
+   ──────────────────────────────────────────────────────────────── */
+:root{
+  --bg:#F7F8FB;
+  --surface:#FFFFFF;
+  --surface-2:#F8FAFC;
+  --sidebar:#0B1220;
+  --sidebar-hover:rgba(255,255,255,.07);
+  --sidebar-active:#FFFFFF;
+  --sidebar-text:#8B98AA;
+  --sidebar-text-active:#0F172A;
+  --text:#101827;
+  --text-2:#5B677A;
+  --text-3:#9AA5B5;
+  --border:#E8EDF3;
+  --green:#119C5B;
+  --green-bg:#E8F8F0;
+  --red:#D64545;
+  --red-bg:#FCECEC;
+  --blue:#2563EB;
+  --blue-bg:#EEF4FF;
+  --amber:#D78518;
+  --amber-bg:#FFF7E6;
+  --purple:#7C3AED;
+  --purple-bg:#F3EEFF;
+  --radius:18px;
+  --radius-sm:12px;
+  --shadow:0 10px 28px rgba(15,23,42,.06),0 2px 8px rgba(15,23,42,.04);
+  --shadow-md:0 22px 55px rgba(15,23,42,.14);
+}
+[data-theme="dark"]{
+  --bg:#0B1020;
+  --surface:#111827;
+  --surface-2:#0F172A;
+  --sidebar:#050814;
+  --sidebar-hover:rgba(255,255,255,.08);
+  --sidebar-active:#FFFFFF;
+  --sidebar-text:#8B98AA;
+  --sidebar-text-active:#0F172A;
+  --text:#F8FAFC;
+  --text-2:#A6B0C0;
+  --text-3:#667085;
+  --border:#1F2937;
+  --green-bg:rgba(17,156,91,.14);
+  --red-bg:rgba(214,69,69,.14);
+  --blue-bg:rgba(37,99,235,.18);
+  --amber-bg:rgba(215,133,24,.15);
+  --purple-bg:rgba(124,58,237,.16);
+}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 25% -10%, rgba(37,99,235,.12), transparent 34%),
+    radial-gradient(circle at 90% 5%, rgba(17,156,91,.08), transparent 26%),
+    var(--bg);
+  letter-spacing:-.01em;
+}
+.sidebar{
+  width:248px;
+  padding:14px;
+  border-right:1px solid rgba(255,255,255,.06);
+  background:linear-gradient(180deg,#0B1220 0%,#08101D 100%);
+}
+.main{margin-left:248px}
+.sidebar-logo{padding:8px 4px 18px;border-bottom:0}
+.sidebar-logo-inner{
+  padding:10px;
+  border-radius:18px;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.06);
+}
+.logo-icon{
+  width:40px;height:40px;border-radius:14px;
+  background:linear-gradient(135deg,#60A5FA,#2563EB 60%,#1D4ED8);
+  box-shadow:0 10px 22px rgba(37,99,235,.32);
+}
+.logo-text{font-size:15px;font-weight:750;letter-spacing:-.02em}
+.logo-sub{font-size:11px;color:#AAB4C3;margin-top:2px}
+.sidebar-nav{padding:10px 0}
+.nav-section-label{padding:16px 10px 7px;color:#65758B}
+.nav-item{
+  min-height:42px;
+  border-radius:14px;
+  padding:10px 12px;
+  margin:3px 0;
+  color:#AAB4C3;
+  font-weight:650;
+}
+.nav-item:hover{transform:translateX(2px);background:var(--sidebar-hover);color:#fff}
+.nav-item.active{
+  background:var(--sidebar-active);
+  color:var(--sidebar-text-active);
+  box-shadow:0 14px 30px rgba(0,0,0,.18);
+}
+.nav-item .nav-icon{opacity:.9}
+.sidebar-footer{padding:12px 0 0;border-top:1px solid rgba(255,255,255,.06)}
+.biz-overview{
+  padding:14px;
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035));
+  border:1px solid rgba(255,255,255,.07);
+}
+.biz-val{font-size:13px;font-weight:700}
+.dark-toggle{border-radius:14px;margin-top:8px}.dark-toggle:hover{background:rgba(255,255,255,.055)}
+.export-btn{height:38px;border-radius:14px;font-weight:700;background:rgba(255,255,255,.09)}
+.topbar{
+  height:76px;
+  padding:0 32px;
+  border-bottom:1px solid rgba(226,232,240,.75);
+  background:rgba(255,255,255,.78);
+  backdrop-filter:blur(18px);
+}
+[data-theme="dark"] .topbar{background:rgba(17,24,39,.78);border-bottom-color:#1F2937}
+.topbar-left h2{font-size:24px;font-weight:800;letter-spacing:-.035em}
+.topbar-left p{font-size:13px;color:var(--text-2);margin-top:3px}
+.content{padding:28px 32px 38px;max-width:1680px;width:100%}
+.date-range,.topbar-right>a{
+  min-height:38px!important;
+  padding:8px 13px!important;
+  border-radius:999px!important;
+  box-shadow:0 1px 0 rgba(15,23,42,.03);
+}
+.user-pill{
+  padding:7px 10px 7px 12px;
+  border:1px solid var(--border);
+  background:var(--surface);
+  border-radius:999px;
+}
+.avatar{width:36px;height:36px;border-radius:999px;background:linear-gradient(135deg,#DBEAFE,#BFDBFE);color:#1D4ED8;font-weight:800}
+.metric-row{gap:16px;margin-bottom:24px}
+.mcard{
+  min-height:132px;
+  padding:18px;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(226,232,240,.86);
+  position:relative;
+  overflow:hidden;
+}
+.mcard::after{
+  content:"";position:absolute;right:-34px;top:-38px;width:92px;height:92px;border-radius:50%;
+  background:rgba(37,99,235,.055);pointer-events:none;
+}
+.mcard:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(15,23,42,.09)}
+.mcard-label{font-size:11px;color:var(--text-3);letter-spacing:.08em;margin-bottom:8px}
+.mcard-value{font-size:25px;font-weight:850;letter-spacing:-.04em}
+.mcard-sub,.mcard-link{font-size:12px;margin-top:8px}
+.mcard-icon{width:42px;height:42px;border-radius:15px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
+.row-3,.row-2,.row-2-1{gap:18px;margin-bottom:18px}
+.card{
+  border-radius:22px;
+  padding:20px;
+  border:1px solid rgba(226,232,240,.88);
+  box-shadow:var(--shadow);
+}
+.card:hover{box-shadow:0 18px 38px rgba(15,23,42,.075)}
+.card-title{font-size:14px;font-weight:800;letter-spacing:-.02em}
+.card-sub{font-size:12px}
+.card-link,.view-all{font-weight:700;text-decoration:none}
+.chart-wrap{height:190px}.donut-wrap{height:190px}.donut-center-val{font-size:19px;font-weight:850}
+.legend{font-size:12px;gap:7px}.legend-dot{width:9px;height:9px}.legend-val{font-weight:750}
+.quick-form .form-row{grid-template-columns:minmax(110px,1fr) minmax(120px,1fr) minmax(100px,.8fr);gap:10px;margin-bottom:10px}
+.fl{gap:6px}.fl label{font-size:10.5px;color:var(--text-3);font-weight:800}
+.fl input,.fl select,.auth-input{
+  min-height:40px;
+  padding:9px 12px;
+  border-radius:13px;
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  transition:border-color .15s, box-shadow .15s, background .15s;
+}
+.fl input:focus,.fl select:focus,.auth-input:focus{
+  border-color:rgba(37,99,235,.65);
+  box-shadow:0 0 0 4px rgba(37,99,235,.10);
+  background:var(--surface);
+}
+.amt-wrap span{left:12px}.amt-wrap input{padding-left:26px!important}
+.qf-btns{gap:9px;margin-top:10px}.btn{min-height:38px;padding:9px 15px;border-radius:13px;font-weight:800}
+.btn-blue{background:linear-gradient(135deg,#3B82F6,#2563EB);box-shadow:0 10px 20px rgba(37,99,235,.18)}
+.btn-red{background:linear-gradient(135deg,#EF4444,#DC2626);box-shadow:0 10px 20px rgba(220,38,38,.14)}
+.btn-ghost{background:var(--surface);border-color:var(--border)}
+.data-table{font-size:13px;border-collapse:separate;border-spacing:0}
+.data-table th{padding:10px 12px;background:var(--surface-2);border-bottom:1px solid var(--border)}
+.data-table th:first-child{border-top-left-radius:12px}.data-table th:last-child{border-top-right-radius:12px}
+.data-table td{padding:12px;border-bottom:1px solid var(--border)}
+.data-table tr:hover td{background:rgba(37,99,235,.035)}
+.channel-badge{padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+.tax-item{border-radius:16px;padding:14px;background:linear-gradient(135deg,var(--amber-bg),rgba(255,247,230,.65))}
+.cashflow-row{gap:10px}.cf-item{padding:10px;border-radius:14px;background:var(--surface-2);border:1px solid var(--border)}
+.auth-wrap{background:radial-gradient(circle at 30% 0%,rgba(37,99,235,.18),transparent 35%),var(--bg)}
+.auth-box{border-radius:26px;padding:34px 30px;box-shadow:var(--shadow-md)}
+.auth-icon{width:54px;height:54px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;border-radius:18px;background:linear-gradient(135deg,#60A5FA,#2563EB);color:white}
+.auth-title{font-size:24px;font-weight:850;letter-spacing:-.035em}.auth-desc{line-height:1.5}.auth-submit{min-height:42px;border-radius:14px;font-weight:800;background:linear-gradient(135deg,#3B82F6,#2563EB)}
+.toast{border-radius:16px;box-shadow:var(--shadow-md)}
+.form-grid-full{gap:14px}.section-title{font-size:18px;font-weight:850}
+@media(max-width:1400px){.metric-row{grid-template-columns:repeat(3,1fr)}.row-2-1{grid-template-columns:1fr 1fr}.row-2-1>.card:last-child{grid-column:1/-1}}
+@media(max-width:900px){.topbar{height:auto;padding:16px;align-items:flex-start;flex-direction:column}.topbar-right{flex-wrap:wrap}.content{padding:20px 16px}.metric-row{grid-template-columns:1fr}.row-2,.row-2-1{grid-template-columns:1fr}.row-2-1>.card:last-child{grid-column:auto}.quick-form .form-row{grid-template-columns:1fr}.sidebar{display:none}.main{margin-left:0}}
+
 </style>
 </head>
 <body>
@@ -294,7 +495,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--t
       <p id="page-desc">Overview of your business finances</p>
     </div>
     <div class="topbar-right">
-      <a href="https://bigman7911.github.io/tracker/setup-guide.html" target="_blank" style="display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:12px;font-weight:500;color:var(--text-2);text-decoration:none;background:var(--surface)" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='var(--surface)'">&#63; Setup guide</a>
+      <a href="https://bigman7911.github.io/tracker/setup-guide.html" target="_blank" style="display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:12px;font-weight:500;color:var(--text-2);text-decoration:none;background:var(--surface)" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='var(--surface)'">Setup guide</a>
       <div class="date-range">&#128197; Jan 1 – Jun 30, 2026 &#8964;</div>
       <div class="user-pill">Hello, <span id="user-greeting" style="margin-left:3px">Reseller!</span></div>
       <div class="avatar" id="user-avatar">R</div>
