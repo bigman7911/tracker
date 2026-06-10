@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reseller Finance Tracker — Setup Guide</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:#f8f8f6;color:#1a1a18;line-height:1.6}
+.page{max-width:720px;margin:0 auto;padding:2rem 1.5rem}
+.hero{text-align:center;padding:2.5rem 0 2rem;border-bottom:1px solid #e5e3dd;margin-bottom:2rem}
+.hero-badge{display:inline-block;background:#E6F1FB;color:#0C447C;font-size:12px;font-weight:500;padding:4px 12px;border-radius:20px;margin-bottom:1rem;letter-spacing:.04em;text-transform:uppercase}
+.hero h1{font-size:26px;font-weight:500;margin-bottom:0.5rem}
+.hero p{font-size:15px;color:#73726c;max-width:480px;margin:0 auto}
+.step-list{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2rem}
+.step{background:#fff;border:1px solid #e5e3dd;border-radius:12px;padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start}
+.step-num{min-width:32px;height:32px;border-radius:50%;background:#185FA5;color:#fff;font-size:14px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.step-num.green{background:#3B6D11}
+.step-num.amber{background:#854F0B}
+.step-num.purple{background:#534AB7}
+.step-body h3{font-size:15px;font-weight:500;margin-bottom:5px}
+.step-body p{font-size:14px;color:#444441;margin-bottom:8px}
+.step-body p:last-child{margin-bottom:0}
+.step-body ul{font-size:14px;color:#444441;padding-left:1.25rem;display:flex;flex-direction:column;gap:4px}
+.step-body a{color:#185FA5;text-decoration:none}
+.step-body a:hover{text-decoration:underline}
+code{background:#f1efea;padding:2px 6px;border-radius:4px;font-family:monospace;font-size:13px;color:#1a1a18}
+.callout{background:#EAF3DE;border:1px solid #97C459;border-radius:10px;padding:1rem 1.25rem;font-size:14px;color:#27500A;margin-bottom:1.5rem;display:flex;gap:10px;align-items:flex-start}
+.callout-warn{background:#FAEEDA;border-color:#EF9F27;color:#633806}
+.callout-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.section-head{font-size:11px;font-weight:500;color:#73726c;text-transform:uppercase;letter-spacing:.07em;margin:2rem 0 1rem;padding-bottom:6px;border-bottom:1px solid #e5e3dd}
+.field-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:1rem}
+.field-table th{text-align:left;padding:7px 10px;background:#f8f8f6;border:1px solid #e5e3dd;font-weight:500;color:#73726c;font-size:12px}
+.field-table td{padding:7px 10px;border:1px solid #e5e3dd;vertical-align:top}
+.field-table td:first-child{font-weight:500;white-space:nowrap}
+.field-table td code{background:#f1efea}
+.badge{display:inline-block;padding:2px 7px;border-radius:5px;font-size:11px;font-weight:500}
+.badge-req{background:#FCEBEB;color:#791F1F}
+.badge-auto{background:#EAF3DE;color:#27500A}
+.badge-opt{background:#f1efea;color:#73726c}
+.faq{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem}
+.faq-item{background:#fff;border:1px solid #e5e3dd;border-radius:10px;padding:1rem 1.25rem}
+.faq-q{font-size:14px;font-weight:500;margin-bottom:5px}
+.faq-a{font-size:14px;color:#444441}
+.footer{text-align:center;padding:2rem 0;border-top:1px solid #e5e3dd;font-size:13px;color:#73726c}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;font-size:14px;border-radius:8px;cursor:pointer;text-decoration:none;font-family:inherit;font-weight:500;border:none;transition:all .15s}
+.btn-primary{background:#185FA5;color:#fff}
+.btn-primary:hover{background:#0C447C}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:1.25rem}
+.channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:10px 0}
+.channel-pill{text-align:center;padding:7px 10px;border-radius:8px;font-size:13px;font-weight:500}
+.cp-local{background:#EAF3DE;color:#27500A}
+.cp-ebay{background:#E6F1FB;color:#0C447C}
+.cp-amazon{background:#FAEEDA;color:#633806}
+.cp-lysted{background:#EEEDFE;color:#3C3489}
+.cp-stubhub{background:#FBEAF0;color:#72243E}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="hero">
+  <div class="hero-badge">Setup guide</div>
+  <h1>Reseller Finance Tracker</h1>
+  <p>Everything you need to get your income, expenses, and year-end Schedule C tracked in one place.</p>
+  <div class="btn-row" style="justify-content:center;margin-top:1.5rem">
+    <a href="https://bigman7911.github.io/reseller-tracker/" class="btn btn-primary" target="_blank">Open the app &#8599;</a>
+  </div>
+</div>
+
+<div class="section-head">Getting started</div>
+
+<div class="step-list">
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h3>Open the app in your browser</h3>
+      <p>The tracker runs entirely in your browser — nothing to install. Just open the link and bookmark it.</p>
+      <p><a href="https://bigman7911.github.io/reseller-tracker/" target="_blank">bigman7911.github.io/reseller-tracker</a></p>
+      <p>Works on desktop and mobile. Chrome or Edge recommended for best experience.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num green">2</div>
+    <div class="step-body">
+      <h3>Your data saves automatically</h3>
+      <p>Every entry you add is saved to your browser's local storage instantly. If you close the tab and come back, everything will still be there — on that same device and browser.</p>
+      <div class="callout callout-warn" style="margin-top:10px">
+        <span class="callout-icon">&#9888;</span>
+        <span>Data is saved <strong>per browser, per device</strong>. If you switch browsers or clear your browser data, you'll lose your entries. Use the Export CSV buttons regularly as a backup.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num amber">3</div>
+    <div class="step-body">
+      <h3>Add your first income entry</h3>
+      <p>Click <strong>+ Income</strong> in the nav. Fill in the fields and hit Add entry. Net profit calculates automatically from Payout − COGS − Shipping.</p>
+      <p>Supported channels:</p>
+      <div class="channels">
+        <div class="channel-pill cp-local">Local / FB</div>
+        <div class="channel-pill cp-ebay">eBay</div>
+        <div class="channel-pill cp-amazon">Amazon</div>
+        <div class="channel-pill cp-lysted">Lysted</div>
+        <div class="channel-pill cp-stubhub">StubHub</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num purple">4</div>
+    <div class="step-body">
+      <h3>Add your expenses</h3>
+      <p>Click <strong>- Expense</strong> in the nav. Every purchase — inventory, software, supplies, shipping — goes here. The Category field maps directly to Schedule C line items at year-end.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-head">Income entry fields</div>
+
+<table class="field-table">
+  <thead><tr><th>Field</th><th>Required?</th><th>What to put</th></tr></thead>
+  <tbody>
+    <tr><td>Channel</td><td><span class="badge badge-req">Required</span></td><td>Where the sale happened — Local, eBay, Amazon, Lysted, or StubHub</td></tr>
+    <tr><td>Buyer</td><td><span class="badge badge-opt">Optional</span></td><td>Name or handle of the buyer, e.g. <code>randy fb</code>. Leave blank for marketplace payouts.</td></tr>
+    <tr><td>Account</td><td><span class="badge badge-req">Required</span></td><td>Where the money landed — BOA, Cash, Cap1, CashApp, Venmo, Zelle, or PayPal</td></tr>
+    <tr><td>Item</td><td><span class="badge badge-req">Required</span></td><td>What you sold, e.g. <code>2x Firman generators</code> or <code>eBay payout</code></td></tr>
+    <tr><td>COGS</td><td><span class="badge badge-req">Required</span></td><td>What you paid for the item. Put <code>0</code> if tracking cost in expenses instead.</td></tr>
+    <tr><td>Shipping</td><td><span class="badge badge-req">Required</span></td><td>Shipping cost you paid out of pocket. Put <code>0</code> if none.</td></tr>
+    <tr><td>Payout</td><td><span class="badge badge-req">Required</span></td><td>What you received. For eBay/Amazon, use the net deposit amount.</td></tr>
+    <tr><td>Net</td><td><span class="badge badge-auto">Auto</span></td><td>Calculated for you: Payout − COGS − Shipping</td></tr>
+  </tbody>
+</table>
+
+<div class="section-head">Expense entry fields</div>
+
+<table class="field-table">
+  <thead><tr><th>Field</th><th>Required?</th><th>What to put</th></tr></thead>
+  <tbody>
+    <tr><td>Amount</td><td><span class="badge badge-req">Required</span></td><td>Dollar amount of the purchase (positive number)</td></tr>
+    <tr><td>Account</td><td><span class="badge badge-req">Required</span></td><td>Card or account used — Mix, CapBiz, BOA, Sapphire, Apple, AMZ, etc.</td></tr>
+    <tr><td>Category</td><td><span class="badge badge-req">Required</span></td><td>See category guide below — this drives your Schedule C</td></tr>
+    <tr><td>Sold on</td><td><span class="badge badge-opt">Optional</span></td><td>Which marketplace this inventory is destined for — eBay, Amazon, Amazon FBA, StubHub, or blank for overhead</td></tr>
+    <tr><td>Item</td><td><span class="badge badge-req">Required</span></td><td>What you bought, e.g. <code>5x daily bugle lego sets</code></td></tr>
+    <tr><td>Notes</td><td><span class="badge badge-opt">Optional</span></td><td>Anything extra — kept 1, partial return, promo credit applied, etc.</td></tr>
+  </tbody>
+</table>
+
+<div class="section-head">Expense categories — Schedule C mapping</div>
+
+<table class="field-table">
+  <thead><tr><th>Category</th><th>Schedule C line</th><th>Use for</th></tr></thead>
+  <tbody>
+    <tr><td><code>cogs</code></td><td>Line 36/42 — Cost of goods</td><td>Inventory purchases — anything you bought to resell</td></tr>
+    <tr><td><code>other expenses</code></td><td>Line 27a — Other expenses</td><td>Platform fees, Amazon charges, subscriptions, Amazon Prime</td></tr>
+    <tr><td><code>software</code></td><td>Line 18 — Office expense</td><td>Keepa, Frugal, any paid tools or apps</td></tr>
+    <tr><td><code>supplies</code></td><td>Line 22 — Supplies</td><td>Boxes, tape, poly bags, packing materials</td></tr>
+    <tr><td><code>shipping</code></td><td>Line 39 — Other costs</td><td>Pirateship labels, postage, shipping charges you paid</td></tr>
+  </tbody>
+</table>
+
+<div class="section-head">Auto-pull from eBay and Amazon (optional)</div>
+
+<div class="callout">
+  <span class="callout-icon">&#9889;</span>
+  <span>Auto-pull automatically imports your eBay payouts and Amazon settlement events so you don't have to enter them manually. It's optional — you can always enter everything by hand.</span>
+</div>
+
+<div class="step-list">
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h3>eBay — get your API credentials</h3>
+      <ul>
+        <li>Go to <a href="https://developer.ebay.com/my/keys" target="_blank">developer.ebay.com/my/keys</a></li>
+        <li>Create a <strong>Production</strong> keyset (not Sandbox)</li>
+        <li>Add scope: <code>https://api.ebay.com/oauth/api_scope/sell.finances</code></li>
+        <li>Generate a User token via OAuth</li>
+        <li>Copy: App ID, Cert ID, Dev ID, and User Token</li>
+        <li>Paste all four into <strong>API Settings → eBay</strong> in the app and hit Save</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num green">2</div>
+    <div class="step-body">
+      <h3>Amazon — get your SP-API credentials</h3>
+      <ul>
+        <li>Go to <a href="https://sellercentral.amazon.com/apps/manage" target="_blank">Seller Central → Apps &amp; Services → Develop Apps</a></li>
+        <li>Create an app and request <strong>Finances</strong> and <strong>Orders</strong> roles</li>
+        <li>Authorize the app and capture: Client ID, Client Secret, Refresh Token</li>
+        <li>US Marketplace ID is <code>ATVPDKIKX0DER</code> (already filled in)</li>
+        <li>Paste into <strong>API Settings → Amazon</strong> in the app and hit Save</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num amber">3</div>
+    <div class="step-body">
+      <h3>Amazon proxy URL</h3>
+      <p>Amazon's API requires a server-side proxy to work from the browser. Your setup includes a Cloudflare Worker that handles this. Ask your account manager for the proxy URL and paste it into the <strong>Auto-pull → Cloudflare Worker URL</strong> field.</p>
+      <p>Hit <strong>Test connection</strong> first to confirm it's reachable before pulling.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num purple">4</div>
+    <div class="step-body">
+      <h3>Pull your data</h3>
+      <p>Go to the <strong>Auto-pull</strong> tab. Set your date range, then hit Pull eBay payouts or Pull Amazon settlements. The pull log will show you exactly what was added and what was skipped (already exists). You can re-pull the same date range safely — duplicates are automatically blocked.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-head">Exporting and backing up</div>
+
+<div class="step-list">
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h3>Export to CSV</h3>
+      <p>Go to <strong>Export</strong> tab. Download income.csv and expenses.csv anytime. These open directly in Excel or Google Sheets.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num green">2</div>
+    <div class="step-body">
+      <h3>Download the blank Excel template</h3>
+      <p>The Export tab also has a <strong>Download blank template</strong> button. This gives you a pre-structured .xlsx file — income sheet, expenses sheet, monthly P&L, and a Schedule C summary — that you can paste your CSV exports into at year-end.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-head">Frequently asked questions</div>
+
+<div class="faq">
+  <div class="faq-item">
+    <div class="faq-q">Will my data be there if I close the browser?</div>
+    <div class="faq-a">Yes — data auto-saves to your browser's localStorage every time you add an entry. It will be there when you come back, as long as you use the same browser on the same device and haven't cleared your browser data.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I use this on my phone?</div>
+    <div class="faq-a">Yes. Open the link in your phone's browser and bookmark it. The layout is responsive. Local storage works on mobile too so your data persists.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What if I accidentally delete an entry?</div>
+    <div class="faq-a">Deletions are permanent — there's no undo. Export your CSVs regularly so you always have a backup. The danger zone clear-all also warns you to export first.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Are my API keys safe?</div>
+    <div class="faq-a">Keys are stored in your browser's localStorage on your own device and are never sent to any server other than eBay and Amazon directly. Don't use this on a shared or public computer.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What does the Dashboard show?</div>
+    <div class="faq-a">Total revenue, expenses, net profit, gross margin, and entry counts at the top. Below that: bar charts of revenue by channel (Local, eBay, Amazon, Lysted, StubHub) and expenses by category (COGS, other, software, supplies, shipping). All charts update live as you add entries.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How do I prepare for Schedule C at year-end?</div>
+    <div class="faq-a">Export your income and expenses CSVs from the Export tab, then paste them into the blank Excel template (also on the Export tab). The template has a P&L sheet that maps totals to the correct Schedule C lines automatically. Take those numbers to your tax preparer or enter them directly into your tax software.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">The eBay or Amazon pull isn't working — what do I check?</div>
+    <div class="faq-a">First confirm your credentials are saved in API Settings (the status should show "Configured"). For Amazon, make sure the proxy URL is entered and the Test connection button returns green. For eBay, make sure you're using a Production keyset — Sandbox keys won't work here.</div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Built by <strong>Train With David</strong> &nbsp;&#183;&nbsp; Questions? Reach out via YouTube <a href="https://www.youtube.com/@davidtrainss" style="color:#185FA5" target="_blank">@davidtrainss</a></p>
+</div>
+
+</div>
+</body>
+</html>
